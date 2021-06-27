@@ -23,6 +23,7 @@ namespace Lncodes.Tutorial.Prototype
             {
                 var binaryFormatter = new BinaryFormatter();
                 binaryFormatter.Serialize(memoryStream, this);
+                binaryFormatter.Binder = new SafeBinaryBinder();
                 memoryStream.Position = default;
                 return binaryFormatter.Deserialize(memoryStream) as BinarySerializationPrototype;
             }

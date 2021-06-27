@@ -12,7 +12,7 @@
         /// <param name="name"></param>
         /// <param name="level"></param>
         /// <param name="inventory"></param>
-        public ShallowCharacter(string name, int level, ShallowInventory inventory)
+        protected ShallowCharacter(string name, int level, ShallowInventory inventory)
         {
             Name = name;
             Level = level;

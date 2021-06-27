@@ -16,8 +16,8 @@ namespace Lncodes.Tutorial.Prototype
         /// <see cref="https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.datacontractattribute?view=net-5.0"/>
         /// <seealso cref="https://stackoverflow.com/questions/802711/serializing-private-member-data"/>
         /// </summary>
-        public string Name;
-        public DeepInventory Inventory;
+        public string Name { get; set; }
+        public DeepInventory Inventory { get; set; }
 
         /// <summary>
         /// Constructor for xml prototype cause it's must have paramterless constructor
@@ -30,7 +30,7 @@ namespace Lncodes.Tutorial.Prototype
         /// <param name="name"></param>
         /// <param name="level"></param>
         /// <param name="inventory"></param>
-        public DeepCharacter(string name, int level, DeepInventory inventory)
+        protected DeepCharacter(string name, int level, DeepInventory inventory)
         {
             Name = name;
             Level = level;
